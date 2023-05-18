@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/swarm"
 	"github.com/docker/docker/client"
-	"github.com/gianarb/orbiter/autoscaler"
-	"github.com/gianarb/orbiter/provider"
+	"github.com/sarkk0x0/orbiter/autoscaler"
+	"github.com/sarkk0x0/orbiter/provider"
+	"github.com/sirupsen/logrus"
 )
 
 // This function use diferent strategies to get information from

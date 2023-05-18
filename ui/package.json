@@ -13,14 +13,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gianarb/orbiter.git"
+    "url": "git+https://github.com/sarkk0x0/orbiter.git"
   },
   "author": "Andres Martin",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/gianarb/orbiter/issues"
+    "url": "https://github.com/sarkk0x0/orbiter/issues"
   },
-  "homepage": "https://github.com/gianarb/orbiter/ui",
+  "homepage": "https://github.com/sarkk0x0/orbiter/ui",
   "dependencies": {
     "babel-plugin-inline-dotenv": "^1.1.1",
     "babel-plugin-transform-inline-environment-variables": "^0.2.0",

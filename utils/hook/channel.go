@@ -1,6 +1,6 @@
 package hook
 
-import "github.com/Sirupsen/logrus"
+import "github.com/sirupsen/logrus"
 
 type Channel struct {
 	c chan *logrus.Entry

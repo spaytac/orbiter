@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/gianarb/orbiter/autoscaler"
+	"github.com/sarkk0x0/orbiter/autoscaler"
 )
 
 type AutoscalerResponse struct {

@@ -1,7 +1,7 @@
 package core
 
 import (
-	"github.com/gianarb/orbiter/autoscaler"
+	"github.com/sarkk0x0/orbiter/autoscaler"
 )
 
 type Core struct {

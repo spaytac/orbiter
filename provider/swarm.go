@@ -5,12 +5,12 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/api/types/filters"
 	"github.com/docker/docker/api/types/swarm"
 	docker "github.com/docker/docker/client"
-	"github.com/gianarb/orbiter/autoscaler"
+	"github.com/sarkk0x0/orbiter/autoscaler"
+	"github.com/sirupsen/logrus"
 )
 
 type SwarmProvider struct {

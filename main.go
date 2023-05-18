@@ -3,10 +3,10 @@ package main
 import (
 	"os"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/gianarb/orbiter/cmd"
-	"github.com/gianarb/orbiter/utils/hook"
 	"github.com/mitchellh/cli"
+	"github.com/sarkk0x0/orbiter/cmd"
+	"github.com/sarkk0x0/orbiter/utils/hook"
+	"github.com/sirupsen/logrus"
 )
 
 func main() {

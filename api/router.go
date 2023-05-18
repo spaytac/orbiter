@@ -1,9 +1,9 @@
 package api
 
 import (
-	"github.com/Sirupsen/logrus"
-	"github.com/gianarb/orbiter/core"
 	"github.com/gorilla/mux"
+	"github.com/sarkk0x0/orbiter/core"
+	"github.com/sirupsen/logrus"
 )
 
 func GetRouter(core *core.Core, eventChannel chan *logrus.Entry) *mux.Router {

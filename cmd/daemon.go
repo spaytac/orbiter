@@ -10,12 +10,12 @@ import (
 	"context"
 	"time"
 
-	"github.com/Sirupsen/logrus"
 	"github.com/docker/docker/api/types"
 	"github.com/docker/docker/client"
-	"github.com/gianarb/orbiter/api"
-	"github.com/gianarb/orbiter/autoscaler"
-	"github.com/gianarb/orbiter/core"
+	"github.com/sarkk0x0/orbiter/api"
+	"github.com/sarkk0x0/orbiter/autoscaler"
+	"github.com/sarkk0x0/orbiter/core"
+	"github.com/sirupsen/logrus"
 )
 
 type DaemonCmd struct {

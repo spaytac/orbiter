@@ -6,9 +6,9 @@ import (
 	"net/http"
 	"net/http/httputil"
 
-	"github.com/Sirupsen/logrus"
-	"github.com/gianarb/orbiter/autoscaler"
 	"github.com/gorilla/mux"
+	"github.com/sarkk0x0/orbiter/autoscaler"
+	"github.com/sirupsen/logrus"
 )
 
 const DIRECTION_UP = true
