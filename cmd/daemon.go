@@ -59,7 +59,7 @@ func (c *DaemonCmd) Run(args []string) int {
 	go func() {
 		counter := 0
 		ctx := context.Background()
-		dockerClient, _ := client.NewEnvClient()
+		dockerClient, _ := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 		for {
 			<-timer1.C
 

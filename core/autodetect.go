@@ -27,7 +27,7 @@ func Autodetect(core *Core) error {
 
 func autoDetectSwarmMode(c *Core) {
 	ctx := context.Background()
-	dockerClient, err := client.NewEnvClient()
+	dockerClient, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 	if err != nil {
 		logrus.WithField("error", err).Debug("Problem communication with Docker")
 		return

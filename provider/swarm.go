@@ -19,7 +19,7 @@ type SwarmProvider struct {
 
 func NewSwarmProvider(c map[string]string) (autoscaler.Provider, error) {
 	var p autoscaler.Provider
-	client, err := docker.NewEnvClient()
+	client, err := docker.NewClientWithOpts(docker.FromEnv, docker.WithAPIVersionNegotiation())
 	if err != nil {
 		logrus.WithField("error", err).Warn("problem to communicate with docker")
 		return p, err
