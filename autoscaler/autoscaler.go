@@ -41,7 +41,7 @@ func canScale(serviceId string, coolDown time.Duration) (retval bool, err error)
 	retval = false
 	err = nil
 	ctx := context.Background()
-	dockerClient, err := client.NewEnvClient()
+	dockerClient, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 	if err != nil {
 		logrus.WithField("error", err).Debug("Problem communication with Docker")
 		return

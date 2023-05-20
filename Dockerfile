@@ -1,11 +1,19 @@
-FROM golang:1.8.3 as builder
+FROM golang:1.18 as builder
 
-WORKDIR /go/src/github.com/sarkk0x0/orbiter
-ADD . /go/src/github.com/sarkk0x0/orbiter/
-RUN make build
+WORKDIR /app
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . ./
+
+RUN mkdir /data && touch /data/sqlite.db
+RUN CGO_ENABLED=0 GOOS=linux go build -o /orbiter
 
 FROM scratch
 
-COPY --from=builder /go/src/github.com/sarkk0x0/orbiter/bin/orbiter /bin/orbiter
-# ENTRYPOINT ["orbiter"]
-CMD ["/bin/orbiter", "daemon"]
+COPY --from=builder /orbiter /orbiter
+COPY --from=builder /data/sqlite.db /data/sqlite.db
+ENV DB_PATH=/data/sqlite.db
+
+CMD ["/orbiter", "daemon"]

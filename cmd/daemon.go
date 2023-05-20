@@ -2,6 +2,7 @@ package cmd
 
 import (
 	"flag"
+	"github.com/sarkk0x0/orbiter/migration"
 	"net/http"
 	"os"
 	"os/signal"
@@ -37,6 +38,9 @@ func (c *DaemonCmd) Run(args []string) int {
 		logrus.SetLevel(logrus.DebugLevel)
 		logrus.Debug("Daemon started in debug mode")
 	}
+
+	migration.Migrate()
+
 	coreEngine := core.Core{
 		Autoscalers: autoscaler.Autoscalers{},
 	}

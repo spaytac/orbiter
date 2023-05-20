@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS service_cron_schedules (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    service_id TEXT NOT NULL,
+    pattern TEXT NOT NULL,
+    created_at TEXT DEFAULT CURRENT_TIMESTAMP
+);
